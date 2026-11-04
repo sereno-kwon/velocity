@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>VELOCITY KOREA</title>
+<meta name="robots" content="noindex">
+<script>
+  // 하위 주소(/deep-v, /en/quill ...)를 원페이지 섹션으로 연결
+  // github.io 미리보기(/velocity/)와 자체 도메인(/) 모두 동작
+  var base = location.hostname.slice(-10) === 'github.io' ? '/velocity/' : '/';
+  var parts = location.pathname.slice(base.length).replace(/\/$/, '').toLowerCase().split('/');
+  var lang = (parts[0] === 'en' || parts[0] === 'ja') ? parts.shift() + '/' : '';
+  var key = parts.join('/');
+  var alias = { 'deep-v':'deepv', 'deepv':'deepv', 'chukker':'deepv', 'classic':'deepv', 'track':'deepv',
+                'quill':'road', 'aileron':'road', 'a23':'road', 'cliffhanger':'touring', 'atlas':'touring',
+                'blunt':'wide', 'blunt-ss':'wide', 'blunt-35':'wide', 'dually':'wide', 'gravel':'wide', 'mtb':'wide',
+                'rims':'guide', 'rim-guide':'guide', 'about':'brand', 'history':'story', 'contact':'showroom', 'dealer':'dealers', 'lineup':'range' };
+  var map = { brand:1, range:1, deepv:1, road:1, touring:1, wide:1, guide:1, story:1, showroom:1, dealers:1 };
+  key = alias[key] || key;
+  location.replace(base + lang + (map[key] ? '#' + key : ''));
+</script>
+<style>body{background:#fff}@media (prefers-color-scheme:dark){body{background:#101114}}</style>
+</head>
+<body></body>
+</html>
