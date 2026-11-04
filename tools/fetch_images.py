@@ -103,6 +103,9 @@ def page_images():
             name = src.split('?')[0].rsplit('/', 1)[-1].lower()
             if re.search(r'logo|icon|favicon|badge|payment|flag|svg', name):
                 continue
+            m2 = re.search(r'_(\d+)x(\d*)\.', name)
+            if m2 and int(m2.group(1)) < 600:  # 썸네일(_180x180 등)은 건너뜁니다
+                continue
             key = re.sub(r'_\d+x\d*|_(small|medium|large|grande)', '', name)
             if key not in seen:
                 seen.add(key); srcs.append(src)
@@ -112,7 +115,9 @@ def fetch_brand():
     og, srcs = page_images()
     print(len(srcs), 'page images')
     fails = 0
-    if og:
+    if og and og.split('?')[0].endswith('.svg'):
+        save(og, 'logo.svg')  # 메인의 og:image가 로고(SVG)라서 로고로 저장합니다. og.jpg는 브랜드 사진으로 따로 만듭니다.
+    elif og:
         fails += not save(og, 'og.jpg', 2400)
     if not srcs:
         print('FAIL  no page images'); return fails + 1

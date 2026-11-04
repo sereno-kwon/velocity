@@ -20,6 +20,8 @@
 <meta property="og:image" content="https://velocity.rubiworkshop.com/images/og.jpg">
 <meta property="og:site_name" content="Velocity 코리아">
 <meta property="og:locale" content="ko_KR">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1200">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Velocity 코리아 | 벨로시티 림 · 핸드빌트 휠">
 <meta name="twitter:description" content="그랜드래피즈에서 롤링하고, 드릴하고, 아노다이징하고, 손으로 조립합니다. 미국에서 만드는 알루미늄 림, Velocity.">
@@ -113,7 +115,9 @@ header.site{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:
 header.site.scrolled,body.menu-open header.site{border-bottom-color:var(--line)}
 .bar{height:var(--header-h);display:flex;align-items:center;gap:40px}
 .logo{flex:none;display:block;line-height:1}
-.wordmark{display:block;font-size:17px;line-height:17px;letter-spacing:.32em;margin-right:-.32em;color:var(--fg);white-space:nowrap}
+.logo img{height:22px;width:auto;max-width:none;filter:brightness(0)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo img{filter:brightness(0) invert(1)}}
+:root[data-theme="dark"] .logo img{filter:brightness(0) invert(1)}
 .menu{display:flex;gap:4px;margin:0;padding:0;list-style:none;height:100%}
 .menu li{height:100%;display:flex;align-items:center}
 .menu a{font-size:14px;line-height:20px;padding:8px 12px;position:relative;white-space:nowrap}
@@ -453,7 +457,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
 <!-- ===== 헤더 ===== -->
 <header class="site" id="hd">
   <div class="container bar">
-    <a href="#top" class="logo" aria-label="Velocity 홈"><span class="wordmark">VELOCITY</span></a>
+    <a href="#top" class="logo" aria-label="Velocity 홈"><img src="images/logo.svg" alt="Velocity" width="184" height="50"></a>
     <ul class="menu" id="menu">
       <li><a href="#brand">Velocity</a></li>
       <li><a href="#deepv">Deep V</a></li>
@@ -512,7 +516,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
       </div></div>
     </div>
     <div class="rh-slide" role="group" aria-roledescription="slide" aria-label="2 / 4">
-      <div class="rh-media"><img src="images/hero/02.jpg" alt="Velocity Deep V" loading="lazy"></div>
+      <div class="rh-media"><img src="images/hero/02.jpg" alt="Velocity 림 생산" loading="lazy"></div>
       <div class="rh-shade"></div>
       <div class="rh-inner"><div class="rh-copy">
         <p class="rh-eyebrow">Classic · Track</p>
@@ -523,7 +527,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
       </div></div>
     </div>
     <div class="rh-slide" role="group" aria-roledescription="slide" aria-label="3 / 4">
-      <div class="rh-media"><img src="images/hero/03.jpg" alt="Velocity 로드 휠" loading="lazy"></div>
+      <div class="rh-media"><img src="images/hero/03.jpg" alt="Velocity 휠" loading="lazy"></div>
       <div class="rh-shade"></div>
       <div class="rh-inner"><div class="rh-copy">
         <p class="rh-eyebrow">Road · Tubeless Ready</p>
@@ -534,7 +538,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
       </div></div>
     </div>
     <div class="rh-slide" role="group" aria-roledescription="slide" aria-label="4 / 4">
-      <div class="rh-media"><img src="images/hero/04.jpg" alt="Velocity 투어링 · 그래블 휠" loading="lazy"></div>
+      <div class="rh-media"><img src="images/hero/04.jpg" alt="Velocity 라이딩" loading="lazy"></div>
       <div class="rh-shade"></div>
       <div class="rh-inner"><div class="rh-copy">
         <p class="rh-eyebrow">Touring · Gravel · Adventure</p>
@@ -585,7 +589,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
     </div>
   </div>
 
-  <figure class="bleed mt reveal"><img src="images/brand/01.jpg" alt="Velocity 그랜드래피즈" loading="lazy"></figure>
+  <figure class="bleed mt reveal"><img src="images/brand/01.jpg" alt="Velocity 림 생산" loading="lazy"></figure>
 
   <div class="container story mt">
     <div class="reveal"><p class="kicker">Craft</p></div>
@@ -598,7 +602,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
 
   <div class="container mt">
     <div class="cols">
-      <div class="cell reveal"><figure><img src="images/brand/02.jpg" alt="Velocity 림 생산" loading="lazy"></figure><h3><small>Made in USA</small>미시간에서 만드는 림</h3><p>림을 해외에서 들여오는 것이 당연해진 시대에, Velocity는 알루미늄 림을 미국 공장에서 직접 만듭니다.</p></div>
+      <div class="cell reveal"><figure><img src="images/brand/02.jpg" alt="Velocity 그랜드래피즈" loading="lazy"></figure><h3><small>Made in USA</small>미시간에서 만드는 림</h3><p>림을 해외에서 들여오는 것이 당연해진 시대에, Velocity는 알루미늄 림을 미국 공장에서 직접 만듭니다.</p></div>
       <div class="cell reveal"><figure><img src="images/brand/03.jpg" alt="Velocity 핸드빌트 휠" loading="lazy"></figure><h3><small>Handbuilt</small>손으로 엮는 휠</h3><p>휠 디파트먼트의 빌더가 스포크 장력과 진원, 디시를 하나씩 맞춥니다. 오래 타도 잘 버티는 휠은 손에서 나옵니다.</p></div>
       <div class="cell reveal"><figure><img src="images/brand/04.jpg" alt="Velocity 아노다이징 컬러" loading="lazy"></figure><h3><small>Colour</small>아노다이징 컬러</h3><p>블랙과 실버만이 아닙니다. Velocity의 컬러 림은 자전거에 개성을 더하는 가장 쉬운 방법이 되었습니다.</p></div>
       <div class="cell reveal"><figure><img src="images/brand/05.jpg" alt="Velocity 라이딩" loading="lazy"></figure><h3><small>Every ride</small>트랙에서 투어링까지</h3><p>픽스드 기어, 로드, 투어링, 그래블, 산악, 탠덤과 폴로까지. 거의 모든 자전거에 맞는 림이 있습니다.</p></div>
@@ -899,7 +903,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
       <p>물통 케이지를 손으로 만들던 1989년의 창고에서, 알루미늄 림을 미국에서 직접 만드는 오늘의 공장까지. Velocity는 바다를 건너 생산을 옮기면서도, 림과 휠을 직접 만든다는 원칙을 지켜왔습니다.</p>
     </div>
   </div>
-  <div class="container mt"><div class="duo reveal" data-gallery="story"><figure><img src="images/brand/06.jpg" alt="Velocity 브랜드 스토리" loading="lazy"></figure><figure><img src="images/brand/07.jpg" alt="Velocity 공장" loading="lazy"></figure></div></div>
+  <div class="container mt"><div class="duo reveal" data-gallery="story"><figure><img src="images/brand/06.jpg" alt="Velocity 라이딩" loading="lazy"></figure><figure><img src="images/brand/07.jpg" alt="Velocity 핸드빌트 휠" loading="lazy"></figure></div></div>
   <div class="wide-wrap mt">
     <div class="container rail-meta reveal"><span>1989 ~ 2026</span><span>DRAG →</span></div>
     <div class="timeline reveal" data-drag>
@@ -925,7 +929,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
 
 <!-- ===== 08 SHOWROOM ===== -->
 <section class="sec" id="showroom" data-sec>
-  <div class="container"><div class="duo reveal" data-gallery="showroom"><figure><img src="images/brand/08.jpg" alt="Velocity 휠" loading="lazy"></figure><figure><img src="images/brand/09.jpg" alt="Velocity 라이딩" loading="lazy"></figure></div></div>
+  <div class="container"><div class="duo reveal" data-gallery="showroom"><figure><img src="images/brand/08.jpg" alt="Velocity 휠" loading="lazy"></figure><figure><img src="images/brand/09.jpg" alt="Velocity 에일러론 림" loading="lazy"></figure></div></div>
   <div class="container contact mt">
     <div class="reveal">
       <p class="kicker">08 · Showroom</p>

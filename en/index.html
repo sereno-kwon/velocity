@@ -20,6 +20,8 @@
 <meta content="https://velocity.rubiworkshop.com/images/og.jpg" property="og:image"/>
 <meta content="Velocity Korea" property="og:site_name"/>
 <meta content="en_US" property="og:locale"/>
+<meta content="2400" property="og:image:width"/>
+<meta content="1200" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Velocity Korea | Velocity Rims · Handbuilt Wheels" name="twitter:title"/>
 <meta content="Rolled, drilled, anodized and built by hand in Grand Rapids. Aluminum rims made in the USA, Velocity." name="twitter:description"/>
@@ -207,7 +209,9 @@ header.site{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:
 header.site.scrolled,body.menu-open header.site{border-bottom-color:var(--line)}
 .bar{height:var(--header-h);display:flex;align-items:center;gap:40px}
 .logo{flex:none;display:block;line-height:1}
-.wordmark{display:block;font-size:17px;line-height:17px;letter-spacing:.32em;margin-right:-.32em;color:var(--fg);white-space:nowrap}
+.logo img{height:22px;width:auto;max-width:none;filter:brightness(0)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo img{filter:brightness(0) invert(1)}}
+:root[data-theme="dark"] .logo img{filter:brightness(0) invert(1)}
 .menu{display:flex;gap:4px;margin:0;padding:0;list-style:none;height:100%}
 .menu li{height:100%;display:flex;align-items:center}
 .menu a{font-size:14px;line-height:20px;padding:8px 12px;position:relative;white-space:nowrap}
@@ -545,7 +549,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
 <!-- ===== 헤더 ===== -->
 <header class="site" id="hd">
 <div class="container bar">
-<a aria-label="Velocity home" class="logo" href="#top"><span class="wordmark">VELOCITY</span></a>
+<a aria-label="Velocity home" class="logo" href="#top"><img alt="Velocity" height="50" src="../images/logo.svg" width="184"/></a>
 <ul class="menu" id="menu">
 <li><a href="#brand">Velocity</a></li>
 <li><a href="#deepv">Deep V</a></li>
@@ -595,13 +599,13 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
 <div class="rh-inner"><div class="rh-copy">
 <p class="rh-eyebrow">Grand Rapids, MI · Since 1989</p>
 <h2 class="rh-title">Velocity</h2>
-<p class="rh-sub">Velocity</p>
+<p class="rh-sub"></p>
 <p class="rh-desc">Rolled, drilled, anodized and built by hand. Aluminum rims made in the USA, Velocity.</p>
 <div class="rh-ctas"><a class="rh-btn" href="#range"><span>View the range</span><svg aria-hidden="true"><use href="#i-arrow"></use></svg></a><a class="rh-btn" href="#showroom"><span>Wheel build consultation</span><svg aria-hidden="true"><use href="#i-arrow"></use></svg></a></div>
 </div></div>
 </div>
 <div aria-label="2 / 4" aria-roledescription="slide" class="rh-slide" role="group">
-<div class="rh-media"><img alt="Velocity Deep V" loading="lazy" src="../images/hero/02.jpg"/></div>
+<div class="rh-media"><img alt="Velocity rim production" loading="lazy" src="../images/hero/02.jpg"/></div>
 <div class="rh-shade"></div>
 <div class="rh-inner"><div class="rh-copy">
 <p class="rh-eyebrow">Classic · Track</p>
@@ -612,7 +616,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
 </div></div>
 </div>
 <div aria-label="3 / 4" aria-roledescription="slide" class="rh-slide" role="group">
-<div class="rh-media"><img alt="Velocity road wheels" loading="lazy" src="../images/hero/03.jpg"/></div>
+<div class="rh-media"><img alt="Velocity wheels" loading="lazy" src="../images/hero/03.jpg"/></div>
 <div class="rh-shade"></div>
 <div class="rh-inner"><div class="rh-copy">
 <p class="rh-eyebrow">Road · Tubeless Ready</p>
@@ -623,7 +627,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
 </div></div>
 </div>
 <div aria-label="4 / 4" aria-roledescription="slide" class="rh-slide" role="group">
-<div class="rh-media"><img alt="Velocity touring and gravel wheels" loading="lazy" src="../images/hero/04.jpg"/></div>
+<div class="rh-media"><img alt="Velocity riding" loading="lazy" src="../images/hero/04.jpg"/></div>
 <div class="rh-shade"></div>
 <div class="rh-inner"><div class="rh-copy">
 <p class="rh-eyebrow">Touring · Gravel · Adventure</p>
@@ -671,7 +675,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
 </div>
 </div>
 </div>
-<figure class="bleed mt reveal"><img alt="Velocity, Grand Rapids" loading="lazy" src="../images/brand/01.jpg"/></figure>
+<figure class="bleed mt reveal"><img alt="Velocity rim production" loading="lazy" src="../images/brand/01.jpg"/></figure>
 <div class="container story mt">
 <div class="reveal"><p class="kicker">Craft</p></div>
 <div class="copy reveal">
@@ -682,7 +686,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
 </div>
 <div class="container mt">
 <div class="cols">
-<div class="cell reveal"><figure><img alt="Velocity rim production" loading="lazy" src="../images/brand/02.jpg"/></figure><h3><small>Made in USA</small>Rims made in Michigan</h3><p>At a time when importing rims is the norm, Velocity makes its aluminum rims in its own American factory.</p></div>
+<div class="cell reveal"><figure><img alt="Velocity, Grand Rapids" loading="lazy" src="../images/brand/02.jpg"/></figure><h3><small>Made in USA</small>Rims made in Michigan</h3><p>At a time when importing rims is the norm, Velocity makes its aluminum rims in its own American factory.</p></div>
 <div class="cell reveal"><figure><img alt="Velocity handbuilt wheels" loading="lazy" src="../images/brand/03.jpg"/></figure><h3><small>Handbuilt</small>Wheels laced by hand</h3><p>Builders in the Wheel Department set spoke tension, true and dish one wheel at a time. Wheels that last come from human hands.</p></div>
 <div class="cell reveal"><figure><img alt="Velocity anodized colours" loading="lazy" src="../images/brand/04.jpg"/></figure><h3><small>Colour</small>Anodized colours</h3><p>Not just black and silver. Velocity's colour rims have become the easiest way to give a bike its own character.</p></div>
 <div class="cell reveal"><figure><img alt="Velocity riding" loading="lazy" src="../images/brand/05.jpg"/></figure><h3><small>Every ride</small>From track to touring</h3><p>Fixed gear, road, touring, gravel, mountain, tandem and polo. There is a rim for almost every bike.</p></div>
@@ -959,7 +963,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
 <p>From a shed in 1989 where water bottle cages were made by hand, to today's factory making aluminum rims in the United States. Velocity moved its production across an ocean, but never let go of the principle of making its own rims and wheels.</p>
 </div>
 </div>
-<div class="container mt"><div class="duo reveal" data-gallery="story"><figure><img alt="Velocity brand story" loading="lazy" src="../images/brand/06.jpg"/></figure><figure><img alt="Velocity factory" loading="lazy" src="../images/brand/07.jpg"/></figure></div></div>
+<div class="container mt"><div class="duo reveal" data-gallery="story"><figure><img alt="Velocity riding" loading="lazy" src="../images/brand/06.jpg"/></figure><figure><img alt="Velocity handbuilt wheels" loading="lazy" src="../images/brand/07.jpg"/></figure></div></div>
 <div class="wide-wrap mt">
 <div class="container rail-meta reveal"><span>1989 ~ 2026</span><span>DRAG →</span></div>
 <div class="timeline reveal" data-drag="">
@@ -984,7 +988,7 @@ footer{background:var(--surface);padding-block:64px 40px;font-size:14px;line-hei
 </section>
 <!-- ===== 08 SHOWROOM ===== -->
 <section class="sec" data-sec="" id="showroom">
-<div class="container"><div class="duo reveal" data-gallery="showroom"><figure><img alt="Velocity wheels" loading="lazy" src="../images/brand/08.jpg"/></figure><figure><img alt="Velocity riding" loading="lazy" src="../images/brand/09.jpg"/></figure></div></div>
+<div class="container"><div class="duo reveal" data-gallery="showroom"><figure><img alt="Velocity wheels" loading="lazy" src="../images/brand/08.jpg"/></figure><figure><img alt="Velocity Aileron rim" loading="lazy" src="../images/brand/09.jpg"/></figure></div></div>
 <div class="container contact mt">
 <div class="reveal">
 <p class="kicker">08 · Showroom</p>
